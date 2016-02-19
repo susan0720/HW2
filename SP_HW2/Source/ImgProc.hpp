@@ -161,6 +161,7 @@ int ImgProc::box_filter(std::vector<std::string> splitted_cmd){
 void ImgProc::main_flow(){
 	//Create Mat objects
 	cv::Mat A;
+	Performance_Record PR;
 	for (int i = 0; i < Mat_num; i++){
 		Matvec.push_back(A);
 	}
@@ -177,8 +178,9 @@ void ImgProc::main_flow(){
 				break;
 		}
 		else if (splitted_cmd[0] == "box_filter"){
-			if (!box_filter(splitted_cmd))
-				break;
+			PR.set_start();
+			int flag = box_filter(splitted_cmd);
+			PR.set_end();
 		}
 			
 	}

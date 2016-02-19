@@ -33,7 +33,7 @@ void Performance_Record::set_end(){
 	end = std::chrono::steady_clock::now();
 	exe_time = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 	ms = exe_time.count();
-	std::cout << (exe_time.count()) / 1000.0 << " ms" << std::endl;
+	std::cout <<"%% It takse "<< (exe_time.count()) / 1000.0 << " ms" << std::endl;
 };
 
 void Performance_Record::show_memory()

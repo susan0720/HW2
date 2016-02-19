@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClInclude Include="..\Source\Common.hpp" />
     <ClInclude Include="..\Source\ImgProc.hpp" />
+    <ClInclude Include="..\Source\Performance.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
