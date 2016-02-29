@@ -20,7 +20,8 @@ Flow :
   3. Choose max/min/median as result
 
 ## Q3
-* Sobel
+* Sobel  
+一階微分，並且補強中央數值，讓邊緣更明顯
 * Gaussian
 * Laplacian
 * Unsharp (USM)
