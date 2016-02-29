@@ -1,7 +1,4 @@
 # HW2
-# HW2
-# HW2
-# HW2
 for special project. 
 
 ## Q1
@@ -11,8 +8,9 @@ for special project.
 Flow : 
   1. Padding
   2. 2D convolution ij is the index within the filter window
-    y = sum{ Pij*Wij }
-## Q2
+    y = sum{ Pij*Wij }  
+
+## Q2  
 * Nonlinear filter
 * Any size, max/min median
 <br/>
