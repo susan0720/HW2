@@ -2,7 +2,7 @@
 for special project. 
 
 ##Introduction 
-  因為這次在用Visual Studio的時候遇到很多問題，像是標頭檔之間的連結都抓不到，還有編譯時不斷要求不知道在哪的"stdafx.h"等等問題，，只好  用HW1的專案來開，並且把所有的濾波器用不同函示分開寫才解決。
+  因為這次在用Visual Studio的時候遇到很多問題，像是標頭檔之間的連結都抓不到，還有編譯時不斷要求不知道在哪的"stdafx.h"等等問題，，只好  用HW1的專案來開，並且把所有的濾波器用不同函示分開寫才解決。所有的結果都在/HW2_SP/TestImg裡。
 
 
 ##Specification
