@@ -22,20 +22,25 @@ for special project.
 ##Implementation
 1. Linear filter  
     試了兩種不同的filter，一次是[111  111  111]，將九個值加起來後要再除以九，可避免overflow。
-<linearOutput.png>
+![linearOutput](/SP_HW2/TestImg/linearOutput.png)  
     另一次是[0-10  -15-1  0-10]，中心點一定要有正的值才不會變太多，其他一定要有負的值才可以平衡亮度，不然會變得很亮；如果每一項都成(-1)
-    ，並且把中心的值調低一點會有負片的效果，。
-<ShrapenOutput.png><linearinverseOutput.png>
+    ，並且把中心的值調低一點會有負片的效果，按次序表現如下圖。  
+![ShrapenOutput.png](/SP_HW2/TestImg/SharpenOutput.png)  
+![linearinverseOutput.png](/SP_HW2/TestImg/linearinverseOutput.png)  
 2. Nonlinear filter
-    取最大值<nonlinearmaxOutput.png>
-    取最小值<nonlinearminOutput.png>
-    取中間值<nonlinearmedOutput.png>
+    取最大值  
+![nonlinearmaxOutput.png](/SP_HW2/TestImg/nonlinearmaxOutput.png)   
+    取最小值  
+![nonlinearminOutput.png](/SP_HW2/TestImg/nonlinearminOutput.png)   
+    取中間值  
+![nonlinearmedOutput.png](/SP_HW2/TestImg/nonlinearmedOutput.png)   
 3. Sobel filter
-    分為X-方向加強邊界(Gx)和為Y-方向加強邊界(Gy)，理論上的G = (Gx^2 + Gy^2)^0.5，不過為了簡化運算，可以改成G = |Gx| + |Gy|。
-<SobelxOutput.png><SobelyOutput.png><SobelOutput.png>
+    分為X-方向加強邊界(Gx)和為Y-方向加強邊界(Gy)，理論上的G = (Gx^2 + Gy^2)^0.5，不過為了簡化運算，可以改成G = |Gx| + |Gy|。  
+![SobelxOutput.png](/SP_HW2/TestImg/SobelxOutput.png)   
+![SobelyOutput.png](/SP_HW2/TestImg/SobelyOutput.png)   
+![SobelOutput.png](/SP_HW2/TestImg/SobelOutput.png)   
     灰階處理後再sobel。
-<SobelgrayOutput.png>
-
+![SobelgrayOutput.png](/SP_HW2/TestImg/SobelgrayOutput.png)   
 
 ##Discussion
 * 不需要考慮太大的filter，才不會造成影像失真。
@@ -49,3 +54,4 @@ for special project.
 1. http://blog.yam.com/chu24688/article/50729404
 2. http://docs.opencv.org/2.4.2/doc/tutorials/core/mat-mask-operations/mat-mask-operations.html#the-filter2d-function
 
+_You **can** combine them_
