@@ -36,22 +36,23 @@ for special project.
 ![nonlinearmedOutput.png](/SP_HW2/TestImg/nonlinearmedOutput.png)   
 3. Sobel filter
     分為X-方向加強邊界(Gx)和為Y-方向加強邊界(Gy)，理論上的G = (Gx^2 + Gy^2)^0.5，不過為了簡化運算，可以改成G = |Gx| + |Gy|。  
-![SobelxOutput.png](/SP_HW2/TestImg/SobelxOutput.png)   
-![SobelyOutput.png](/SP_HW2/TestImg/SobelyOutput.png)   
-![SobelOutput.png](/SP_HW2/TestImg/SobelOutput.png)   
-    灰階處理後再sobel。
-![SobelgrayOutput.png](/SP_HW2/TestImg/SobelgrayOutput.png)   
+    先對x方向做sobel。   
+![SobelxOutput.png](/SP_HW2/TestImg/SobelxOutput.png)     
+    再對y方向做sobel。   
+![SobelyOutput.png](/SP_HW2/TestImg/SobelyOutput.png)     
+直接相加。   
+![SobelOutput.png](/SP_HW2/TestImg/SobelOutput.png)     
+    灰階處理後再sobel，比較不雜亂。。  
+![SobelgrayOutput.png](/SP_HW2/TestImg/SobelgrayOutput.png)     
 
 ##Discussion
-* 不需要考慮太大的filter，才不會造成影像失真。
+* 由於原圖片的解析度大概400多，可以不需要考慮太大的filter，才不會造成影像失真。
 * linear filter中[111  111  111]因為是和附近平均的結果，看起來就像是像素較低的影像。
     而[0-10  -15-1  0-10]是把中心點突出，和上下左右的pixel拉大差距，對比變強，讓色彩看起來更銳利。
 * Nonlinear filter中也是讓附近的值都相同，所以看起來也很粗糙，取最大值會讓畫面看起來比較亮，最小值最暗，取中間值的亮度和色彩和原版最相似。
-* sobel filter中，先經過灰階處理會比較清楚，才不會有其他色彩干擾。
+* sobel filter中，先經過灰階處理會比較清楚，才不會有其他色彩干擾；因為G = |Gx| + |Gy|和G = (Gx^2 + Gy^2)^0.5兩種運算方法還是有差，例如一些斜向的邊界會被化簡，不過，整體上看起來還是蠻正確的。   
 
 
 ##Reference
 1. http://blog.yam.com/chu24688/article/50729404
 2. http://docs.opencv.org/2.4.2/doc/tutorials/core/mat-mask-operations/mat-mask-operations.html#the-filter2d-function
-
-_You **can** combine them_
